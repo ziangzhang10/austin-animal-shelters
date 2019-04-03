@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <!-- javaScript links to enable dropdown functionality -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:relative; top:0; bottom:0; width:50%; }
+</style>
+</head>
+<body>
+ 
+<style>
+#menu {
+position: absolute;
+background: #fff;
+padding: 10px;
+font-family: 'Open Sans', sans-serif;
+}
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">FACC</a>
+      </div>
+
+      
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Found-Pets-Map/hye6-gvq2">Data source</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://data.austintexas.gov/Locations-and-Maps/Zipcodes/ghsj-v65t">Shapefile</a></li>
+              <li><a href="http://geopandas.org/">Geocode</a></li>
+              <li><a href="https://www.mapbox.com/">Mapbox</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="container">
+      <h1>Animals Found</h1>
+      <div>
+      <p>...</p>
+      <div id='map'style='width: 1000px; height: 400px;'></div>
+<div id='menu'>
+<input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
+<label for='streets'>streets</label>
+<input id='light-v10' type='radio' name='rtoggle' value='light'>
+<label for='light'>light</label>
+<input id='dark-v10' type='radio' name='rtoggle' value='dark'>
+<label for='dark'>dark</label>
+<input id='outdoors-v11' type='radio' name='rtoggle' value='outdoors'>
+<label for='outdoors'>outdoors</label>
+<input id='satellite-v9' type='radio' name='rtoggle' value='satellite'>
+<label for='satellite'>satellite</label>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidmV5ZXNrZWxzb24iLCJhIjoiY2p0c3d5a3kwMDB2azQzbG1oNXBsbDYxaCJ9.-iQxJ52lXON6XgOr3ntkSQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+zoom: 9,
+center: [-97.750832, 30.287113]
+});
+ 
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
+ 
+function switchLayer(layer) {
+var layerId = layer.target.id;
+map.setStyle('mapbox://styles/mapbox/' + layerId);
+}
+ 
+for (var i = 0; i < inputs.length; i++) {
+inputs[i].onclick = switchLayer;
+}
+</script>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+  </div>
+
+  <div class="container">
+    <h3 class="text-center">Thumbnails</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">List Groups</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge">10</span> Cras justo odio
+        </li>
+        <li class="list-group-item">
+          <span class="badge">3</span> Cras justo odio
+        </li>
+        <li class="list-group-item">
+          <span class="badge">4</span> Cras justo odio
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Panels</h3>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Nav Tabs</h3>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Nav Pills</h3>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Alerts</h3>
+      <div class="alert alert-success" role="alert">
+        <a href="#" class="alert-link">Success Alert</a>
+      </div>
+      <div class="alert alert-info" role="alert">
+        <a href="#" class="alert-link">Info Alert</a>
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <a href="#" class="alert-link">Warning Alert</a>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        <a href="#" class="alert-link">Danger Alert</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Progress Bar</h3>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          60%
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 class="text-center">Buttons</h3>
+      <button class="btn btn-default">Default Button</button>
+      <button class="btn btn-primary">Primary Button</button>
+      <button class="btn btn-danger">Danger Button</button>
+      <button class="btn btn-info">Info Button</button>
+      <button class="btn btn-warning">Warning Button</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
