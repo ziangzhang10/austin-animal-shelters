@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns:kml="http://earth.google.com/kml/2.2">
+  <Document id="featureCollection">
+<Style id="defaultStyle">
+  <LineStyle>
+    <width>1.5</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>7d8a30c4</color>
+  </PolyStyle>
+</Style>
+  <Folder><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Auditorium Shores</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;920 W Riverside Dr.&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78704&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.go</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.755943,30.26424
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Davis White Northeast District Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;5909 Crystalbrook Dr&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78724&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.g</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.652878,30.302725
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Emma Long Metropolitan Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;1600 City Park Rd&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78730&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.goog</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.838501,30.335217
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Onion Creek District Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;7001 Onion Creek Dr&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78744&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.go</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.743599,30.171667
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Shoal Creek Greenbelt</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;div dir=&quot;ltr&quot;&gt;2600-2799 Lamar Blvd. &lt;br&gt;Austin, TX&lt;/div&gt;</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.748955,30.295168
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>West Austin Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;1317 W 10th St&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78703&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.google.</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.757111,30.277468
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Walnut Creek District Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;12138 N Lamar Blvd&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78753&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.goo</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.679832,30.398497
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Zilker Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;2100 Barton Springs Rd&lt;/DIV&gt; &lt;DIV&gt;Austin, TX 78704&lt;BR&gt;&lt;IMG src=&quot;http://cbk0</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.769638,30.263988
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Red Bud Isle</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>&lt;DIV&gt;3401 Redbud Trail Unit Cr.&lt;/DIV&gt; &lt;DIV&gt;Austin, TX&lt;BR&gt;&lt;IMG src=&quot;http://cbk0.g</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.801483,30.295906
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Far West</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>6916 Great Northern Blvd.&lt;br&gt;Austin, TX 78757&lt;br&gt;&lt;a href=&quot;https://maps.google.co</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.74794,30.350876
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Mary Moore Searight Metro Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>907 W Slaughter Ln&lt;br&gt;Austin, TX 78748&lt;br&gt;&lt;a href=&quot;https://maps.google.com/maps/</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.806038,30.173923
+    </coordinates></Point>
+    </Placemark><Placemark>
+      <styleUrl>#defaultStyle</styleUrl>
+      <name>Norwood Tract at Town Lake Metro Park</name>
+      <ExtendedData>
+        <Data name="descriptio"><value>1009 Edgecliff Terrace&lt;br&gt;Austin, TX 78704&lt;br&gt;&lt;a href=&quot;https://maps.google.com/m</value></Data>
+      </ExtendedData>
+      <Point><coordinates>
+      -97.737854,30.249901
+    </coordinates></Point>
+    </Placemark></Folder>  </Document>
+  </kml>
