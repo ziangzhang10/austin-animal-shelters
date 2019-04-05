@@ -1,0 +1,120 @@
+body { margin:0; 
+    padding:0;
+    font-family:'Vast Shadow', cursive;
+    background-image: url("mixedaniamls4.jpg");
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    #map { position:relative; 
+            top:0; 
+            bottom:0;
+            width:50%; }
+            text-center {
+            background: #f99;
+            overflow: hidden;
+    }
+    .bg{
+      /* The image used */
+      background-image: url("mixedaniamls4.jpg");
+      /* Full height */
+      height: auto; 
+      
+    
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: blur(8px);
+      opacity: 0.3;
+      top:0;
+    }
+    
+    
+    
+    
+    .hr-image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    
+    .hr-middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .container:hover .hr-image {
+      opacity: 0.3;
+    }
+    
+    .container:hover .hr-middle {
+      opacity: 1;
+    }
+    
+    .hr-text {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .marker {
+      background-image: url('icons/Pins/Cat.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+    
+      cursor: pointer;
+    }
+    .marker-dog {
+      background-image: url('icons/Pins/Dog.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .marker-cat {
+      background-image: url('icons/Pins/Cat.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .marker-other {
+      background-image: url('icons/Pins/Other.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .mapboxgl-popup {
+      max-width: 200px;
+    }
+    
+    .mapboxgl-popup-content {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
