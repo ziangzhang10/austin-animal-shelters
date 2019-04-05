@@ -1,0 +1,3 @@
+,index,age_upon_intake,animal_id,animal_type,breed,color,datetime,datetime2,found_location,intake_condition,intake_type,name,sex_upon_intake,lat,long,zipcode
+0,0,2 years,A786884,Dog,Beagle Mix,Tricolor,2019-01-03T16:19:00.000,2019-01-03T16:19:00.000,2501 Magin Meadow Dr in Austin (TX),Normal,Stray,*Brock,Neutered Male,30.3656367,-97.69256539999999,78753
+1,1,3 days,A787254,Dog,Black Mouth Cur Mix,Black/White,2019-01-10T10:19:00.000,2019-01-10T10:19:00.000,2000 Man O War in Travis (TX),Normal,Stray,*Sprinkles,Intact Female,30.160186,-97.728926,78744
