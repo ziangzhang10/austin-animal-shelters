@@ -1,46 +1,38 @@
-d3.csv("./fulldata.csv").then(function(data) {
-    console.log(data[0].zipcode);
-    
+d3.csv("./casesPerZip.csv").then(function(data) {
 
+    var trace1 = {
+        x: data.map(row => row.zipcode),
+        y: data.map(row => row.dog),
+        name: 'Dogs 🐶',
+        type: 'bar'
+    };
 
+    var trace2 = {
+        x: data.map(row => row.zipcode),
+        y: data.map(row => row.cat),
+        name: 'Cats 😸',
+        type: 'bar'
+    };
 
+    var trace3 = {
+        x: data.map(row => row.zipcode),
+        y: data.map(row => row.bird),
+        name: 'Birds 🦅',
+        type: 'bar'
+    };
+
+    var trace4 = {
+        x: data.map(row => row.zipcode),
+        y: data.map(row => row.other),
+        name: 'Other Animals',
+        type: 'bar'
+    };
+
+    var dat = [trace1, trace2, trace3, trace4];
+
+    var layout = {barmode: 'stack'};
+
+    Plotly.newPlot('plot', dat, layout);
 
   });
 
-
-
-
-
-
-// // Trace1 for the Greek Data
-// var trace1 = {
-//   x: data.map(row => row.pair),
-//   y: data.map(row => row.greekSearchResults),
-//   text: data.map(row => row.greekName),
-//   name: "Greek",
-//   type: "bar"
-// };
-
-// // Trace 2 for the Roman Data
-// var trace2 = {
-//   x: data.map(row => row.pair),
-//   y: data.map(row => row.romanSearchResults),
-//   text: data.map(row => row.romanName),
-//   name: "Roman",
-//   type: "bar"
-// };
-
-// // Combining both traces
-// var data = [trace1, trace2];
-
-// // Apply the group barmode to the layout and auto-size margins to prevent labels from overflowing
-// var layout = {
-//   title: "Greek vs Roman gods search results",
-//   barmode: "group",
-//   xaxis:{
-//     automargin: true
-//   }
-// };
-
-// // Render the plot to the div tag with id "plot"
-// Plotly.newPlot("plot", data, layout);
