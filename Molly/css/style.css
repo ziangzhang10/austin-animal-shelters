@@ -1,0 +1,96 @@
+/* remove default margin and padding from body */
+body {
+  padding: 0;
+  margin: 0;
+  margin:0; 
+  padding:0;
+  font-family:'Vast Shadow', cursive;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body,
+html {
+  height: 100%;
+}
+.bg{
+  /* The image used */
+  background-image: url("icons/Images/mixedaniamls4.jpg");
+  /* Full height */
+  height: auto; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+  opacity: 0.3;
+  top:0;
+}
+
+/* set map, body, and html to 100% of the screen size */
+#map{
+  font-family: 'Shadows Into Light Two', cursive;
+  position:relative; 
+  top:0; 
+  bottom:0;
+  width:50%; }
+  text-center {
+  background: #f99;
+  overflow: hidden;
+}
+
+#menu {
+  position: absolute;
+  background: #fff;
+  padding: 10px;
+  font-family: 'Indie Flower', cursive;
+  }
+
+.legend {
+  line-height: 18px;
+  color: #555;
+  font-family: 'Indie Flower', cursive;
+}
+.legend i {
+  width: 28px;
+  height: 18px;
+  float: left;
+  margin-right: 20px;
+  opacity: 0.7;
+  font-family: 'Indie Flower', cursive;
+}
+
+.info {
+  padding: 6px 8px;
+  
+  background: rgb(9, 235, 148);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+
+
+.mapboxgl-popup {
+  max-width: 50px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.marker {
+  background-image: url('icons/Pins/Cat.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+}

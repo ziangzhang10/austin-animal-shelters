@@ -72,6 +72,11 @@ def scatter():
    return select_df
    #return render_template("scatter.html")
 
+@app.route("/update_db")
+def update_db():
+   update_database(sqldbpath)
+
+
 #@app.route("/names")
 #def names():
 #    """Return a list of sample names."""
