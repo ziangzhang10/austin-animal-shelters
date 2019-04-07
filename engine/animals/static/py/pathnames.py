@@ -1,0 +1,5 @@
+AustinIncome_url = "http://zipatlas.com/us/tx/austin/zip-code-comparison/median-household-income.htm"
+austin_url = "https://data.austintexas.gov/resource/"
+outcome_dataset = "9t4d-g238.json"
+intake_dataset = "fdzn-9yqv.json"
+google_geocode_url = "https://maps.googleapis.com/maps/api/geocode/"
