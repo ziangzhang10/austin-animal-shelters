@@ -11,6 +11,9 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 
+from static/py/Data_to_db import update_database, get_dataset
+from static/py/pathnames import sqldbpath
+
 app = Flask(__name__)
 
 
@@ -58,6 +61,11 @@ def scatter():
 
    # Return a list of the column names (sample names)
    return render_template("scatter.html")
+
+@app.route("/update_db")
+def update_db():
+   update_database(sqldbpath)
+
 
 #@app.route("/names")
 #def names():
