@@ -8,7 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -52,6 +52,12 @@ def graph():
    # Return a list of the column names (sample names)
    return render_template("graph.html")
 
+@app.route("/scatter")
+def scatter():
+   """Return scatter plot."""
+
+   # Return a list of the column names (sample names)
+   return render_template("scatter.html")
 
 #@app.route("/names")
 #def names():
