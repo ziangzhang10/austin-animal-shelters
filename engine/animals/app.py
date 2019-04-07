@@ -11,6 +11,8 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 
+import sqlite3
+
 app = Flask(__name__)
 
 
@@ -18,9 +20,10 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
-#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/bellybutton.sqlite" # for local
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/austin_animals_db.sqlite" # for local
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL_1', '') # for heroku
-#db = SQLAlchemy(app)
+db = SQLAlchemy(app)
+
 #
 ## reflect an existing database into a new model
 #Base = automap_base()
@@ -55,9 +58,24 @@ def graph():
 @app.route("/scatter")
 def scatter():
    """Return scatter plot."""
+   engine = create_engine("sqlite:///db/austin_animals_db.sqlite")
 
+   select_str = "select i.*,  \
+                   o.age_upon_outcome, o.date_of_birth, o.datetime as outcome_datetime,    \
+                   o.outcome_subtype, o.outcome_type, o.sex_upon_outcome, m.HouseholdIncome  \
+                   from austin_animal_intake as i \
+                   left join austin_animal_outcomes as o on i.animal_id = o.animal_id \
+                   inner join austin_income as m where i.zipcode = m.ZipCode"
+
+   select_df = pd.read_sql_query(select_str, con=engine)
    # Return a list of the column names (sample names)
-   return render_template("scatter.html")
+   return select_df
+   #return render_template("scatter.html")
+
+@app.route("/update_db")
+def update_db():
+   update_database(sqldbpath)
+
 
 #@app.route("/names")
 #def names():
