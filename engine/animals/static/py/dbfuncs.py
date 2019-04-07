@@ -20,7 +20,7 @@ def create_db_engine(dbname):
     return engine
 
 def build_table(df, tablename, engine):
-    df.to_sql(tablename, con=engine, dtype={col_name: String for col_name in df})
+    df.to_sql(tablename, con=engine, if_exists="replace", dtype={col_name: String for col_name in df})
 
 def add_geodata(addresses, engine):
     try:

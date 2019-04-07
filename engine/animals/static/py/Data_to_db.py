@@ -63,17 +63,18 @@ add_geodata(addresses, engine)
 
 # test2_df.to_csv("Resources/test_outcomes_data.csv")
 
-
-# select_str = "select i.*,  \
-#                 o.age_upon_outcome, o.date_of_birth, o.datetime as outcome_datetime,    \
-#                 o.outcome_subtype, o.outcome_type, o.sex_upon_outcome, m.HouseholdIncome  \
-#                 from austin_animal_intake as i \
-#                 left join austin_animal_outcomes as o on i.animal_id = o.animal_id \
-#                 inner join austin_income as m where i.zipcode = m.ZipCode"
+# This code selects the entire dataset as we agreed - all columns. 
+# Other code will select groupings and columns of interest
+select_str = "select i.*,  \
+                o.age_upon_outcome, o.date_of_birth, o.datetime as outcome_datetime,    \
+                o.outcome_subtype, o.outcome_type, o.sex_upon_outcome, m.HouseholdIncome  \
+                from austin_animal_intake as i \
+                left join austin_animal_outcomes as o on i.animal_id = o.animal_id \
+                inner join austin_income as m where i.zipcode = m.ZipCode"
               
-# select_df = pd.read_sql_query(select_str, con=engine)
+select_df = pd.read_sql_query(select_str, con=engine)
 
-# select_df.head()
+print(select_df.head())
 
 # select_df.to_csv("Resources/fulldata.csv")
 
