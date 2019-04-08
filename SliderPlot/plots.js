@@ -1,18 +1,18 @@
 // Slider plot.js
 
-Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv', function (err, data) {
+Plotly.d3.csv('./breed_data.csv', function (err, data) {
   // Create a lookup table to sort and regroup the columns of data,
-  // first by year, then by continent:
+  // first by date, then by animal_type:
   var lookup = {};
-  function getData(year, continent) {
-    var byYear, trace;
-    if (!(byYear = lookup[year])) {;
-      byYear = lookup[year] = {};
+  function getData(date, animal_type) {
+    var byDate, trace;
+    if (!(byDate = lookup[date])) {;
+      byDate = lookup[date] = {};
     }
-	 // If a container for this year + continent doesn't exist yet,
+	 // If a container for this date + animal_type doesn't exist yet,
 	 // then create one:
-    if (!(trace = byYear[continent])) {
-      trace = byYear[continent] = {
+    if (!(trace = byDate[animal_type])) {
+      trace = byDate[animal_type] = {
         x: [],
         y: [],
         id: [],
@@ -26,32 +26,32 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminde
   // Go through each row, get the right trace, and append the data:
   for (var i = 0; i < data.length; i++) {
     var datum = data[i];
-    var trace = getData(datum.year, datum.continent);
-    trace.text.push(datum.country);
-    trace.id.push(datum.country);
-    trace.x.push(datum.lifeExp);
-    trace.y.push(datum.gdpPercap);
-    trace.marker.size.push(datum.pop);
+    var trace = getData(datum.date, datum.animal_type);
+    trace.text.push(datum.breed);
+    trace.id.push(datum.breed);
+    trace.x.push(datum.breed_cumsum);
+    trace.y.push(datum.cum_mean);
+    trace.marker.size.push(datum.breed_cumsum);
   }
 
   // Get the group names:
-  var years = Object.keys(lookup);
-  // In this case, every year includes every continent, so we
-  // can just infer the continents from the *first* year:
-  var firstYear = lookup[years[0]];
-  var continents = Object.keys(firstYear);
+  var dates = Object.keys(lookup);
+  // In this case, every date includes every animal_type, so we
+  // can just infer the animal_types from the *first* date:
+  var firstdate = lookup[dates[0]];
+  var animal_types = Object.keys(firstdate);
 
-  // Create the main traces, one for each continent:
+  // Create the main traces, one for each animal_type:
   var traces = [];
-  for (i = 0; i < continents.length; i++) {
-    var data = firstYear[continents[i]];
+  for (i = 0; i < animal_types.length; i++) {
+    var data = firstdate[animal_types[i]];
 	 // One small note. We're creating a single trace here, to which
-	 // the frames will pass data for the different years. It's
+	 // the frames will pass data for the different dates. It's
 	 // subtle, but to avoid data reference problems, we'll slice
 	 // the arrays to ensure we never write any new data into our
 	 // lookup table:
     traces.push({
-      name: continents[i],
+      name: animal_types[i],
       x: data.x.slice(),
       y: data.y.slice(),
       id: data.id.slice(),
@@ -65,16 +65,16 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminde
     });
   }
 
-  // Create a frame for each year. Frames are effectively just
+  // Create a frame for each date. Frames are effectively just
   // traces, except they don't need to contain the *full* trace
   // definition (for example, appearance). The frames just need
   // the parts the traces that change (here, the data).
   var frames = [];
-  for (i = 0; i < years.length; i++) {
+  for (i = 0; i < dates.length; i++) {
     frames.push({
-      name: years[i],
-      data: continents.map(function (continent) {
-        return getData(years[i], continent);
+      name: dates[i],
+      data: animal_types.map(function (animal_type) {
+        return getData(dates[i], animal_type);
       })
     })
   }
@@ -84,11 +84,11 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminde
   // In this example, we'll animate to one of the named frames
   // created in the above loop.
   var sliderSteps = [];
-  for (i = 0; i < years.length; i++) {
+  for (i = 0; i < dates.length; i++) {
     sliderSteps.push({
       method: 'animate',
-      label: years[i],
-      args: [[years[i]], {
+      label: dates[i],
+      args: [[dates[i]], {
         mode: 'immediate',
         transition: {duration: 300},
         frame: {duration: 300, redraw: false},
@@ -98,12 +98,13 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminde
 
   var layout = {
     xaxis: {
-      title: 'Life Expectancy',
-      range: [30, 85]
+      title: 'Number of Cases Per Breed',
+      range: [0, 15]
     },
     yaxis: {
-      title: 'GDP per Capita',
-      type: 'log'
+      title: 'Cum. Ave. of Household Income',
+      // type: 'log'
+      range: [10000, 130000]
     },
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
@@ -147,7 +148,7 @@ Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminde
       pad: {l: 130, t: 55},
       currentvalue: {
         visible: true,
-        prefix: 'Year:',
+        prefix: 'date:',
         xanchor: 'right',
         font: {size: 20, color: '#666'}
       },
