@@ -24,15 +24,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/austin_animals_db.sqlite" 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL_1', '') # for heroku
 db = SQLAlchemy(app)
 
-#
-## reflect an existing database into a new model
-#Base = automap_base()
-## reflect the tables
-#Base.prepare(db.engine, reflect=True)
-#
-## Save references to each table
-#Samples_Metadata = Base.classes.sample_metadata
-#Samples = Base.classes.samples
+
+# # reflect an existing database into a new model
+# Base = automap_base()
+# # reflect the tables
+# Base.prepare(db.engine, reflect=True)
+
+# # Save references to each table
+# Samples_Metadata = Base.classes.sample_metadata
+# Samples = Base.classes.samples
 
 
 @app.route("/")
@@ -47,13 +47,81 @@ def map():
    # Return a list of the column names (sample names)
    return render_template("map.html")
 
+@app.route("/bardata")
+def bardata():
+   THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+   my_file = os.path.join(THIS_FOLDER, 'static', 'csv', 'fulldata.csv')
+   path_data = (my_file)
+   full_data_df = pd.read_csv(path_data)
+   count_data = full_data_df.groupby(['zipcode'])['animal_type'].count().reset_index()
+   # creating an empty dataframe to hold our summary data for the stacked bar chart 
+   data_sum = pd.DataFrame()
 
-@app.route("/graph")
-def graph():
+   # number of cases
+   data_sum['number_cases'] = full_data_df.groupby(['zipcode'])['animal_type'].count()
+
+   # number of dogs 
+   dogs_df = full_data_df[full_data_df['animal_type'].str.match('Dog')]
+   data_sum['dog'] = dogs_df.groupby(['zipcode'])['animal_type'].count()
+
+   # number of cats 
+   cats_df = full_data_df[full_data_df['animal_type'].str.match('Cat')]
+   data_sum['cat'] = cats_df.groupby(['zipcode'])['animal_type'].count()
+
+   # number of birds
+   birds_df = full_data_df[full_data_df['animal_type'].str.match('Bird')]
+   data_sum['bird'] = birds_df.groupby(['zipcode'])['animal_type'].count()
+
+   # number of other animals
+   other_df = full_data_df[full_data_df['animal_type'].str.match('Other')]
+   data_sum['other'] = other_df.groupby(['zipcode'])['animal_type'].count()
+
+   # fill the NaNs with zeros
+   cases_per_zip = data_sum.fillna(0)
+
+   # reset index 
+   cases_per_zip = cases_per_zip.reset_index()
+   
+   # using dictionary to convert specific columns 
+   convert_dict = {'zipcode': 'str', 
+                  'number_cases': int,
+                  'dog': int,
+                  'cat': int,
+                  'bird': int,
+                  'other': int,
+                  } 
+   
+   cases_per_zip = cases_per_zip.astype(convert_dict)
+   results = cases_per_zip.to_json(orient='records')
+   #"""Return the MetaData for a given sample."""
+   # sel = [
+   #      Samples_Metadata.zipcode,
+   #      Samples_Metadata.number_cases,
+   #      Samples_Metadata.dog,
+   #      Samples_Metadata.cat,
+   #      Samples_Metadata.bird,
+   #      Samples_Metadata.other
+   #  ]
+   # results = db.session.query(*sel).filter(Samples_Metadata.zipcode == zipcode).all()
+   # # Create a dictionary entry for each row of metadata information
+   # sample_metadata = {}
+   # for result in results:
+   #      sample_metadata["zipcode"] = result[0]
+   #      sample_metadata["number_cases"] = result[1]
+   #      sample_metadata["dog"] = result[2]
+   #      sample_metadata["cat"] = result[3]
+   #      sample_metadata["bird"] = result[4]
+   #      sample_metadata["other"] = result[5]
+
+   # print(sample_metadata)
+   return jsonify(results)
+
+@app.route("/bargraph")
+def bargraph():
    """Return graphs."""
 
    # Return a list of the column names (sample names)
-   return render_template("graph.html")
+   return render_template("bargraph.html")
 
 @app.route("/scatter")
 def scatter():
