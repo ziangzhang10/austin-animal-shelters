@@ -1,39 +1,16 @@
-// d3.csv("https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/breed_data.csv").then(function(data) {
-//   console.log(data);
-//   var trace1 = {
-//     x: data.map(row => row.breed_cumsum),
-//     y: data.map(row => row.breed_cumsum),
-//     type: 'scatter'
-//   };
-  
-//   // var trace2 = {
-//   //   x: [1, 2, 3, 4],
-//   //   y: [16, 5, 11, 9],
-//   //   type: 'scatter'
-//   // };
-  
-//   var data = [trace1];
-  
-//   Plotly.newPlot('plot', data);
-
-// });
-
-// // Slider plot.js
-
-d3.csv('https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/breed_data.csv', function (data) {
+Plotly.d3.csv('https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/breed_data2.csv', function (err, data) {
   // Create a lookup table to sort and regroup the columns of data,
   // first by date, then by animal_type:
-
   var lookup = {};
   function getData(date, animal_type) {
-    var byDate, trace;
-    if (!(byDate = lookup[date])) {;
-      byDate = lookup[date] = {};
+    var bydate, trace;
+    if (!(bydate = lookup[date])) {;
+      bydate = lookup[date] = {};
     }
 	 // If a container for this date + animal_type doesn't exist yet,
 	 // then create one:
-    if (!(trace = byDate[animal_type])) {
-      trace = byDate[animal_type] = {
+    if (!(trace = bydate[animal_type])) {
+      trace = bydate[animal_type] = {
         x: [],
         y: [],
         id: [],
@@ -52,7 +29,7 @@ d3.csv('https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/bre
     trace.id.push(datum.breed);
     trace.x.push(datum.breed_cumsum);
     trace.y.push(datum.cum_mean);
-    trace.marker.size.push(datum.breed_cumsum);
+    trace.marker.size.push(datum.breed_cumsum*12000000);
   }
 
   // Get the group names:
@@ -119,11 +96,11 @@ d3.csv('https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/bre
 
   var layout = {
     xaxis: {
-      title: 'Number of Cases Per Breed',
-      range: [0, 15]
+      title: 'Numb of Cases Per Breed',
+      range: [0, 20]
     },
     yaxis: {
-      title: 'Cum. Ave. of Household Income',
+      title: 'GDP per Capita',
       // type: 'log'
       range: [10000, 130000]
     },
