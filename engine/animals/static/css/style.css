@@ -6,28 +6,39 @@ body,
   margin: 0;
 }
 
-.legend {
-  line-height: 18px;
-  color: #555;
-}
-.legend i {
-  width: 18px;
-  height: 18px;
-  float: left;
-  margin-right: 8px;
-  opacity: 0.7;
-}
-
-#html, #body, #map-container {
-  height: 100%;
-}
-
-
-#html, #body, #map-row {
-  height: 80%;
-}
-
-
-#html, #body, #map-col {
-  height: 80%;
-}
+body { 
+  margin:0; 
+  padding:0;
+  font-family:'Vast Shadow', cursive, 'Maven Pro', sans-serif;
+  background-image: url("\static\png\mixedaniamls4.jpg");
+  background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .h1,.h3, .p3{
+  font-family:'Vast Shadow', cursive;
+  }
+  .p,.p1, .p2{
+  font-family: 'Maven Pro', sans-serif;
+  }
+  
+  .btn-primary {
+      color: #fff;
+      background-color: #b56c5e;
+      border-color: #3d2520;
+  }
+  .btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+      color: #fff;
+      background-color: #e05f0f;
+      border-color: #561c16;
+  }
+  
+  .peopleCarouselImg {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
+    margin: auto;
+  }
+  
+  
