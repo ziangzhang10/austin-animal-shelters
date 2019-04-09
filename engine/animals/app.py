@@ -1,7 +1,7 @@
 import os
-
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -42,10 +42,18 @@ def index():
 
 @app.route("/map")
 def map():
-   """Return map."""
-
+ 
+   engine = create_engine("sqlite:///db/austin_animals_db.sqlite")
+   mappy_str = "select i.*,  \
+                  o.age_upon_outcome, o.date_of_birth, o.datetime as outcome_datetime,    \
+                  o.outcome_subtype, o.outcome_type, o.sex_upon_outcome, m.HouseholdIncome  \
+                  from austin_animal_intake as i \
+                  left join austin_animal_outcomes as o on i.animal_id = o.animal_id \
+                  inner join austin_income as m where i.zipcode = m.ZipCode"
+   mappy_df = pd.read_sql_query(mappy_str, con=engine)
+  # Return a list of the column names (sample names)
    # Return a list of the column names (sample names)
-   return render_template("map.html")
+   return mappy_df.jsonify()
 
 
 @app.route("/graph")
