@@ -1,4 +1,5 @@
 url = '/bardata';
+
 d3.json(url).then(function (stuff) {
 
     var data = JSON.parse(stuff);
@@ -92,8 +93,12 @@ d3.json(url).then(function (stuff) {
 
     var dat = [trace1, trace2, trace3, trace4];
 
-    window.onload = function () {
+//    window.onload = function () {
+    window.addEventListener('load', renderChart);
+    document.body.addEventListener('dblclick', renderChart, true); 
 
+    function renderChart(){
+        console.log(dat);
         var chart = new CanvasJS.Chart("chartContainer", {
             exportEnabled: true,
             animationEnabled: true,
@@ -137,17 +142,20 @@ d3.json(url).then(function (stuff) {
         });
         chart.render();
 
-        function toggleDataSeries(e) {
-            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                e.dataSeries.visible = false;
-            } else {
-                e.dataSeries.visible = true;
-            }
-            e.chart.render();
+        //window.stop(); // to prevent it from loading infinite times.
+    }
+    
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else {
+            e.dataSeries.visible = true;
         }
-
+        renderChart();
+        e.chart.render();
     }
 });
+
 
 /////////////////////////////////////////////////////////////
 // Original: plotly bar chart has no animation

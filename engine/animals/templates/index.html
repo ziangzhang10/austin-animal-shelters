@@ -2,52 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Austin Animals Rescue Study</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-  crossorigin=""/>
-
-  <!-- Icons -->
-  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}">
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset='utf-8' />
+    <title>FAAC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme|Asap|Asap+Condensed|Baloo|Baloo+Chettan|Indie+Flower|Jacques+Francois+Shadow|Londrina+Shadow|Maven+Pro|Shadows+Into+Light|Signika|Varela+Round|Vast+Shadow"
+      rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
+  
+  
 </head>
 
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="/static/png/Logo2-FAAC.png">Logo</a> -->
+    <a class="navbar-brand" href="{{ url_for('index') }}">
+      <img src="/static/png/Logo3-FAAC.png" , width="120" , height="57" , alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url_for('index') }}">FAAC <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+					<a class="nav-link" href="#">Cat</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Dog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Other</a>
+				</li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkVisual" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Visuals
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkVisual">
+            <a class="dropdown-item" href="{{ url_for('map') }}">Map</a>
+            <a class="dropdown-item" href="{{ url_for('bargraph') }}">Bar Graph</a>
+            <a class="dropdown-item" href="{{ url_for('scatter') }}">Scatter Plot</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Sources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="http://geopandas.org/">Geocode</a>
+            <a class="dropdown-item" href="https://www.mapbox.com/">Mapbox</a>
+            <a class="dropdown-item"
+              href="https://data.austintexas.gov/Locations-and-Maps/Zipcodes/ghsj-v65t">Shapefile</a>
+            <a class="dropdown-item"
+              href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Found-Pets-Map/hye6-gvq2">AAC</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container" id="map-container">
-  <!-- <div id="map-id"></div> -->
+    <!-- <div id="map-id"></div> -->
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Austin Animals Rescue Study</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    <div class="row" id="map-row">
-      <div class="col-md-7" id="map-col">
-        <div id="map-id"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-md-8">
-        <div id="bubble">blablabla</div>
-      </div>
-    </div>
+
   </div>
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
@@ -64,8 +111,8 @@
 
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-  crossorigin=""></script>
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
 
   <!-- Icons -->
   <script src="{{ url_for('static', filename='js/leaflet.extra-markers.min.js') }}"></script>

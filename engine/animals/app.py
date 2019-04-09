@@ -137,8 +137,8 @@ def scatter():
 
    select_df = pd.read_sql_query(select_str, con=engine)
    # Return a list of the column names (sample names)
-   return select_df
-   #return render_template("scatter.html")
+   #return select_df
+   return render_template("scatter.html")
 
 @app.route("/update_db")
 def update_db():
