@@ -1,8 +1,29 @@
-// Slider plot.js
+// d3.csv("https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/breed_data.csv").then(function(data) {
+//   console.log(data);
+//   var trace1 = {
+//     x: data.map(row => row.breed_cumsum),
+//     y: data.map(row => row.breed_cumsum),
+//     type: 'scatter'
+//   };
+  
+//   // var trace2 = {
+//   //   x: [1, 2, 3, 4],
+//   //   y: [16, 5, 11, 9],
+//   //   type: 'scatter'
+//   // };
+  
+//   var data = [trace1];
+  
+//   Plotly.newPlot('plot', data);
 
-Plotly.d3.csv('./breed_data.csv', function (err, data) {
+// });
+
+// // Slider plot.js
+
+d3.csv('https://raw.githubusercontent.com/AhmedaCheick/csv_store/master/data/breed_data.csv', function (data) {
   // Create a lookup table to sort and regroup the columns of data,
   // first by date, then by animal_type:
+
   var lookup = {};
   function getData(date, animal_type) {
     var byDate, trace;
