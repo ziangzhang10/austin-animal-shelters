@@ -114,143 +114,28 @@
 <br>
 </div></div></div>
 
+<!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
 
- 
+  <!-- MomentJS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
 
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
 
-  
-  
+  <!-- Icons -->
+  <script src="{{ url_for('static', filename='js/leaflet.extra-markers.min.js') }}"></script>
 
+  <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
+  <!-- API Key -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
 
-
-
-
-
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidmV5ZXNrZWxzb24iLCJhIjoiY2p0c3d5a3kwMDB2azQzbG1oNXBsbDYxaCJ9.-iQxJ52lXON6XgOr3ntkSQ';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
-zoom: 9,
-center: [-97.750832, 30.287113]
-});
- 
-var layerList = document.getElementById('menu');
-var inputs = layerList.getElementsByTagName('input');
- 
-function switchLayer(layer) {
-var layerId = layer.target.id;
-map.setStyle('mapbox://styles/mapbox/' + layerId);
-}
- 
-for (var i = 0; i < inputs.length; i++) {
-inputs[i].onclick = switchLayer;
-}
-</script>
-
-
-
-
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoidmV5ZXNrZWxzb24iLCJhIjoiY2p0c3d5a3kwMDB2azQzbG1oNXBsbDYxaCJ9.-iQxJ52lXON6XgOr3ntkSQ';
-    var bounds = [
-    [-98.071312, 30.078618], // Southwest coordinates
-    [-97.501179, 30.526227]  // Northeast coordinates
-    ];
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    zoom: 11,
-    center: [-97.750832, 30.287113],
-    maxBounds: bounds // Sets bounds as max
-    });
-     
-    var layerList = document.getElementById('menu');
-    var inputs = layerList.getElementsByTagName('input');
-     
-    function switchLayer(layer) {
-    var layerId = layer.target.id;
-    map.setStyle('mapbox://styles/mapbox/' + layerId);
-    }
-     
-    for (var i = 0; i < inputs.length; i++) {
-    inputs[i].onclick = switchLayer;
-    }
-    
-    
-    
-    
-    var geojson = {
-    "type": "FeatureCollection",
-    "features": [
-    {
-    "type": "Feature",
-    "properties": {
-    "animal": "Other",
-    "message": "Foo",
-    "iconSize": [20, 20]
-    },
-    "geometry": {
-    "type": "Point",
-    "coordinates": [
-    -97.708333,
-    30.381768
-    ]
-    }
-    },
-    {
-    "type": "Feature",
-    "properties": {
-    "animal": "Cat",
-    "message": "Bar",
-    "iconSize": [60, 60]
-    },
-    "geometry": {
-    "type": "Point",
-    "coordinates": [
-    -97.860104,
-    30.227005
-    ]
-    }
-    },
-    {
-    "type": "Feature",
-    "properties": {
-    "animal": "Dog",
-    "message": "Baz",
-    "iconSize": [40, 40]
-    },
-    "geometry": {
-    "type": "Point",
-    "coordinates": [
-    -97.775008,
-    30.291660
-    ]
-    }
-    }
-    ]
-    };
-    
-    
-    geojson.features.forEach(function(marker) {
-    // create a DOM element for the marker
-    var el = document.createElement('div');
-    el.className = 'marker';
-    //el.style.backgroundImage = 'url(icons/png/cat-face.png)';
-    el.style.backgroundImage = 'url(icons/Pins/' + marker.properties.animal + '.png)';
-    //el.style.backgroundImage = 'url(https://placekitten.com/g/' + marker.properties.iconSize.join('/') + '/)';
-    
-    el.addEventListener('click', function() {
-    window.alert(marker.properties.message);
-    });
-     
-    // add marker to map
-    new mapboxgl.Marker(el)
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
-    });
-    </script> 
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
 </body>
 </html>
 </div>
