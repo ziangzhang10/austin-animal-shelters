@@ -53,7 +53,7 @@ def map():
    mappy_df = pd.read_sql_query(mappy_str, con=engine)
   # Return a list of the column names (sample names)
    # Return a list of the column names (sample names)
-   return josonify(mappy_df)
+   return jsonify(mappy_df)
 
 @app.route("/bardata")
 def bardata():
