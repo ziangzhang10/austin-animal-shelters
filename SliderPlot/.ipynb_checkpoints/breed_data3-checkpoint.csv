@@ -1,0 +1,210 @@
+,breed,animal_type,date,ave_hsIncome,breed_cumsum,cum_mean
+0,American Pit Bull Terrier Mix,Dog,2019-01-01,75204.0,1,75204.0
+1,American Pit Bull Terrier Mix,Dog,2019-02-10,36480.0,2,55842.0
+2,Australian Cattle Dog/Labrador Retriever,Dog,2019-02-17,42398.0,1,42398.0
+3,Australian Kelpie Mix,Dog,2019-02-11,42398.0,1,42398.0
+4,Basenji Mix,Dog,2019-01-19,47076.0,1,47076.0
+5,Basset Hound/German Shepherd,Dog,2019-02-08,57710.0,1,57710.0
+6,Bat Mix,Other,2019-01-22,25369.0,1,25369.0
+7,Bat Mix,Other,2019-02-06,36641.0,2,31005.0
+8,Bat Mix,Other,2019-02-22,23348.0,3,28453.0
+9,Beagle,Dog,2019-01-05,57710.0,1,57710.0
+10,Beagle Mix,Dog,2019-01-02,23348.0,1,23348.0
+11,Beagle Mix,Dog,2019-01-02,23348.0,2,23348.0
+12,Beagle Mix,Dog,2019-01-26,87290.0,3,44662.0
+13,Beagle Mix,Dog,2019-02-13,57710.0,4,47924.0
+14,Beagle Mix,Dog,2019-03-30,23348.0,5,43009.0
+15,Beagle Mix,Dog,2019-03-30,23348.0,6,39732.0
+16,Beagle/German Shepherd,Dog,2019-01-26,43458.0,1,43458.0
+17,Beagle/Pug,Dog,2019-01-12,38206.0,1,38206.0
+18,Black Mouth Cur Mix,Dog,2019-01-10,45090.0,1,45090.0
+19,Border Terrier Mix,Dog,2019-02-11,23348.0,1,23348.0
+20,Boxer Mix,Dog,2019-01-22,62294.0,1,62294.0
+21,Boxer/Labrador Retriever,Dog,2019-01-03,25369.0,1,25369.0
+22,Boxer/Labrador Retriever,Dog,2019-01-17,38206.0,2,31788.0
+23,Bullmastiff,Dog,2019-03-03,75204.0,1,75204.0
+24,Bullmastiff Mix,Dog,2019-01-25,38206.0,1,38206.0
+25,Cairn Terrier Mix,Dog,2019-02-07,38206.0,1,38206.0
+26,Cairn Terrier/Dachshund Wirehair,Dog,2019-02-16,38256.0,1,38256.0
+27,Catahoula Mix,Dog,2019-01-29,38256.0,1,38256.0
+28,Cavalier Span,Dog,2019-01-08,23348.0,1,23348.0
+29,Chesa Bay Retr/Pit Bull,Dog,2019-02-27,23348.0,1,23348.0
+30,Chihuahua Longhair Mix,Dog,2019-01-07,23348.0,1,23348.0
+31,Chihuahua Longhair Mix,Dog,2019-02-24,23348.0,2,23348.0
+32,Chihuahua Shorthair,Dog,2019-01-08,30207.0,1,30207.0
+33,Chihuahua Shorthair Mix,Dog,2019-01-02,89891.0,1,89891.0
+34,Chihuahua Shorthair Mix,Dog,2019-01-03,45090.0,2,67490.0
+35,Chihuahua Shorthair Mix,Dog,2019-01-03,38256.0,3,57746.0
+36,Chihuahua Shorthair Mix,Dog,2019-01-07,26646.0,4,49971.0
+37,Chihuahua Shorthair Mix,Dog,2019-01-08,36641.0,5,47305.0
+38,Chihuahua Shorthair Mix,Dog,2019-01-11,57710.0,6,49039.0
+39,Chihuahua Shorthair Mix,Dog,2019-01-12,25369.0,7,45658.0
+40,Chihuahua Shorthair Mix,Dog,2019-01-12,23348.0,8,42869.0
+41,Chihuahua Shorthair Mix,Dog,2019-01-12,23348.0,9,40700.0
+42,Chihuahua Shorthair Mix,Dog,2019-01-15,36641.0,10,40294.0
+43,Chihuahua Shorthair Mix,Dog,2019-02-06,23348.0,11,38753.0
+44,Chihuahua Shorthair Mix,Dog,2019-02-06,23348.0,12,37470.0
+45,Chihuahua Shorthair Mix,Dog,2019-02-22,26646.0,13,36637.0
+46,Chihuahua Shorthair Mix,Dog,2019-02-26,36978.0,14,36661.0
+47,Chihuahua Shorthair Mix,Dog,2019-03-02,23348.0,15,35774.0
+48,Chihuahua Shorthair Mix,Dog,2019-03-03,60861.0,16,37342.0
+49,Chihuahua Shorthair/Dachshund,Dog,2019-02-16,25369.0,1,25369.0
+50,Chihuahua Shorthair/Dachshund,Dog,2019-02-24,36480.0,2,30924.0
+51,Chinese Sharpei Mix,Dog,2019-01-11,23348.0,1,23348.0
+52,Cocker Spaniel,Dog,2019-01-29,38206.0,1,38206.0
+53,Coyote,Other,2019-01-21,38256.0,1,38256.0
+54,Dachshund Mix,Dog,2019-01-08,38206.0,1,38206.0
+55,Dachshund Mix,Dog,2019-01-14,38256.0,2,38231.0
+56,Dachshund Mix,Dog,2019-01-14,38256.0,3,38239.0
+57,Dachshund Mix,Dog,2019-01-25,45090.0,4,39952.0
+58,Dachshund Mix,Dog,2019-01-28,38256.0,5,39613.0
+59,Dachshund Mix,Dog,2019-01-28,38256.0,6,39387.0
+60,Dachshund Mix,Dog,2019-02-05,36480.0,7,38971.0
+61,Dachshund Mix,Dog,2019-02-05,36480.0,8,38660.0
+62,Dachshund Mix,Dog,2019-02-15,36480.0,9,38418.0
+63,Dachshund Mix,Dog,2019-02-15,36480.0,10,38224.0
+64,Dachshund Wirehair Mix,Dog,2019-02-07,36978.0,1,36978.0
+65,Domestic Longhair Mix,Cat,2019-02-14,43458.0,1,43458.0
+66,Domestic Longhair Mix,Cat,2019-02-14,23348.0,2,33403.0
+67,Domestic Medium Hair Mix,Cat,2019-01-16,43458.0,1,43458.0
+68,Domestic Shorthair,Cat,2019-01-15,61284.0,1,61284.0
+69,Domestic Shorthair Mix,Cat,2019-01-03,25369.0,1,25369.0
+70,Domestic Shorthair Mix,Cat,2019-01-03,23348.0,2,24358.0
+71,Domestic Shorthair Mix,Cat,2019-01-03,25369.0,3,24695.0
+72,Domestic Shorthair Mix,Cat,2019-01-04,38256.0,4,28086.0
+73,Domestic Shorthair Mix,Cat,2019-01-06,43458.0,5,31160.0
+74,Domestic Shorthair Mix,Cat,2019-01-07,54591.0,6,35065.0
+75,Domestic Shorthair Mix,Cat,2019-01-07,54591.0,7,37855.0
+76,Domestic Shorthair Mix,Cat,2019-01-07,54591.0,8,39947.0
+77,Domestic Shorthair Mix,Cat,2019-01-14,38256.0,9,39759.0
+78,Domestic Shorthair Mix,Cat,2019-01-14,23348.0,10,38118.0
+79,Domestic Shorthair Mix,Cat,2019-01-17,38256.0,11,38130.0
+80,Domestic Shorthair Mix,Cat,2019-01-19,23348.0,12,36898.0
+81,Domestic Shorthair Mix,Cat,2019-01-20,38206.0,13,36999.0
+82,Domestic Shorthair Mix,Cat,2019-01-23,23348.0,14,36024.0
+83,Domestic Shorthair Mix,Cat,2019-01-25,54591.0,15,37262.0
+84,Domestic Shorthair Mix,Cat,2019-01-25,54591.0,16,38345.0
+85,Domestic Shorthair Mix,Cat,2019-01-25,54591.0,17,39300.0
+86,Domestic Shorthair Mix,Cat,2019-01-28,42398.0,18,39473.0
+87,Domestic Shorthair Mix,Cat,2019-01-28,35794.0,19,39279.0
+88,Domestic Shorthair Mix,Cat,2019-01-30,38256.0,20,39228.0
+89,Domestic Shorthair Mix,Cat,2019-02-01,38206.0,21,39179.0
+90,Domestic Shorthair Mix,Cat,2019-02-02,38256.0,22,39137.0
+91,Domestic Shorthair Mix,Cat,2019-02-04,38206.0,23,39097.0
+92,Domestic Shorthair Mix,Cat,2019-02-05,23348.0,24,38440.0
+93,Domestic Shorthair Mix,Cat,2019-02-06,51810.0,25,38975.0
+94,Domestic Shorthair Mix,Cat,2019-02-06,51810.0,26,39469.0
+95,Domestic Shorthair Mix,Cat,2019-02-09,23348.0,27,38872.0
+96,Domestic Shorthair Mix,Cat,2019-02-10,23348.0,28,38317.0
+97,Domestic Shorthair Mix,Cat,2019-02-11,23348.0,29,37801.0
+98,Domestic Shorthair Mix,Cat,2019-02-12,62294.0,30,38618.0
+99,Domestic Shorthair Mix,Cat,2019-02-12,23348.0,31,38125.0
+100,Domestic Shorthair Mix,Cat,2019-02-15,38206.0,32,38128.0
+101,Domestic Shorthair Mix,Cat,2019-02-16,47076.0,33,38399.0
+102,Domestic Shorthair Mix,Cat,2019-02-19,38206.0,34,38393.0
+103,Domestic Shorthair Mix,Cat,2019-02-20,54591.0,35,38856.0
+104,Domestic Shorthair Mix,Cat,2019-02-21,54591.0,36,39293.0
+105,Domestic Shorthair Mix,Cat,2019-02-21,54591.0,37,39706.0
+106,Domestic Shorthair Mix,Cat,2019-02-21,54591.0,38,40098.0
+107,Domestic Shorthair Mix,Cat,2019-02-21,23348.0,39,39669.0
+108,Domestic Shorthair Mix,Cat,2019-02-21,38206.0,40,39632.0
+109,Domestic Shorthair Mix,Cat,2019-02-26,38206.0,41,39597.0
+110,Domestic Shorthair/Bengal,Cat,2019-02-27,23348.0,1,23348.0
+111,Duck Mix,Bird,2019-01-06,59497.0,1,59497.0
+112,Fox,Other,2019-03-02,128524.0,1,128524.0
+113,German Shepherd,Dog,2019-01-07,23348.0,1,23348.0
+114,German Shepherd,Dog,2019-01-07,23348.0,2,23348.0
+115,German Shepherd,Dog,2019-02-07,23348.0,3,23348.0
+116,German Shepherd,Dog,2019-02-07,23348.0,4,23348.0
+117,German Shepherd Mix,Dog,2019-01-22,36480.0,1,36480.0
+118,German Shepherd Mix,Dog,2019-01-29,36480.0,2,36480.0
+119,German Shepherd Mix,Dog,2019-02-18,36641.0,3,36534.0
+120,German Shepherd Mix,Dog,2019-02-18,38206.0,4,36952.0
+121,German Shepherd Mix,Dog,2019-02-24,34242.0,5,36410.0
+122,German Shepherd Mix,Dog,2019-03-01,34242.0,6,36048.0
+123,German Shepherd/Great Pyrenees,Dog,2019-01-16,26646.0,1,26646.0
+124,Golden Retriever Mix,Dog,2019-01-02,87029.0,1,87029.0
+125,Golden Retriever Mix,Dog,2019-01-20,57710.0,2,72370.0
+126,Golden Retriever Mix,Dog,2019-02-23,62648.0,3,69129.0
+127,Golden Retriever/Irish Setter,Dog,2019-02-06,29779.0,1,29779.0
+128,Great Pyrenees/Chow Chow,Dog,2019-02-18,23348.0,1,23348.0
+129,Hamster,Other,2019-01-19,38256.0,1,38256.0
+130,Irish Wolfhound Mix,Dog,2019-02-15,38256.0,1,38256.0
+131,Jack Russell Terrier Mix,Dog,2019-02-13,23348.0,1,23348.0
+132,Labrador Retriever Mix,Dog,2019-01-02,23348.0,1,23348.0
+133,Labrador Retriever Mix,Dog,2019-01-06,23348.0,2,23348.0
+134,Labrador Retriever Mix,Dog,2019-01-09,78428.0,3,41708.0
+135,Labrador Retriever Mix,Dog,2019-01-11,38256.0,4,40845.0
+136,Labrador Retriever Mix,Dog,2019-01-12,34242.0,5,39524.0
+137,Labrador Retriever Mix,Dog,2019-01-17,38256.0,6,39313.0
+138,Labrador Retriever Mix,Dog,2019-01-17,43458.0,7,39905.0
+139,Labrador Retriever Mix,Dog,2019-01-24,23348.0,8,37836.0
+140,Labrador Retriever Mix,Dog,2019-01-24,23348.0,9,36226.0
+141,Labrador Retriever Mix,Dog,2019-01-24,23348.0,10,34938.0
+142,Labrador Retriever Mix,Dog,2019-01-24,23348.0,11,33884.0
+143,Labrador Retriever Mix,Dog,2019-01-25,78428.0,12,37596.0
+144,Labrador Retriever Mix,Dog,2019-01-27,103951.0,13,42701.0
+145,Labrador Retriever Mix,Dog,2019-01-29,51810.0,14,43351.0
+146,Labrador Retriever Mix,Dog,2019-01-29,38206.0,15,43008.0
+147,Labrador Retriever Mix,Dog,2019-01-29,23348.0,16,41779.0
+148,Labrador Retriever Mix,Dog,2019-01-29,23348.0,17,40695.0
+149,Labrador Retriever Mix,Dog,2019-01-29,23348.0,18,39732.0
+150,Labrador Retriever Mix,Dog,2019-01-31,36480.0,19,39560.0
+151,Labrador Retriever Mix,Dog,2019-02-04,43458.0,20,39755.0
+152,Labrador Retriever Mix,Dog,2019-02-06,23348.0,21,38974.0
+153,Labrador Retriever/Beagle,Dog,2019-02-03,23348.0,1,23348.0
+154,Labrador Retriever/Great Pyrenees,Dog,2019-02-04,30207.0,1,30207.0
+155,Lhasa Apso Mix,Dog,2019-02-23,35794.0,1,35794.0
+156,Maine Coon Mix,Cat,2019-02-10,23348.0,1,23348.0
+157,Miniature Schnauzer Mix,Dog,2019-01-19,43458.0,1,43458.0
+158,Miniature Schnauzer Mix,Dog,2019-01-26,23348.0,2,33403.0
+159,Parakeet Mix,Bird,2019-01-11,23348.0,1,23348.0
+160,Pit Bull Mix,Dog,2019-01-08,34242.0,1,34242.0
+161,Pit Bull Mix,Dog,2019-01-09,61284.0,2,47763.0
+162,Pit Bull Mix,Dog,2019-01-12,23348.0,3,39625.0
+163,Pit Bull Mix,Dog,2019-01-14,78428.0,4,49326.0
+164,Pit Bull Mix,Dog,2019-01-16,23348.0,5,44130.0
+165,Pit Bull Mix,Dog,2019-01-16,38256.0,6,43151.0
+166,Pit Bull Mix,Dog,2019-01-25,60861.0,7,45681.0
+167,Pit Bull Mix,Dog,2019-01-29,23348.0,8,42889.0
+168,Pit Bull Mix,Dog,2019-01-29,60861.0,9,44886.0
+169,Pit Bull Mix,Dog,2019-01-29,36641.0,10,44062.0
+170,Pit Bull Mix,Dog,2019-02-02,23348.0,11,42179.0
+171,Pit Bull Mix,Dog,2019-02-02,43458.0,12,42285.0
+172,Pit Bull Mix,Dog,2019-02-04,26646.0,13,41082.0
+173,Pit Bull Mix,Dog,2019-02-16,30207.0,14,40305.0
+174,Pit Bull Mix,Dog,2019-02-25,42398.0,15,40445.0
+175,Pit Bull Mix,Dog,2019-02-27,61284.0,16,41747.0
+176,Pointer Mix,Dog,2019-01-25,45090.0,1,45090.0
+177,Pointer Mix,Dog,2019-02-07,36641.0,2,40866.0
+178,Pointer/Chinese Sharpei,Dog,2019-01-08,25369.0,1,25369.0
+179,Pomeranian,Dog,2019-02-19,23348.0,1,23348.0
+180,Raccoon Mix,Other,2019-01-27,51078.0,1,51078.0
+181,Rat Terrier Mix,Dog,2019-01-01,23348.0,1,23348.0
+182,Rat Terrier Mix,Dog,2019-02-12,23348.0,2,23348.0
+183,Rat Terrier Mix,Dog,2019-02-12,23348.0,3,23348.0
+184,Rat Terrier Mix,Dog,2019-02-12,23348.0,4,23348.0
+185,Rat Terrier Mix,Dog,2019-02-12,23348.0,5,23348.0
+186,Rat Terrier Mix,Dog,2019-02-16,23348.0,6,23348.0
+187,Rat Terrier Mix,Dog,2019-02-16,23348.0,7,23348.0
+188,Rat Terrier Mix,Dog,2019-02-16,23348.0,8,23348.0
+189,Rat Terrier Mix,Dog,2019-02-16,23348.0,9,23348.0
+190,Rat Terrier Mix,Dog,2019-02-24,23348.0,10,23348.0
+191,Rat Terrier Mix,Dog,2019-02-24,23348.0,11,23348.0
+192,Rat Terrier Mix,Dog,2019-02-24,23348.0,12,23348.0
+193,Rat Terrier Mix,Dog,2019-02-24,23348.0,13,23348.0
+194,Rat Terrier Mix,Dog,2019-03-07,23348.0,14,23348.0
+195,Rat Terrier Mix,Dog,2019-03-07,23348.0,15,23348.0
+196,Rat Terrier Mix,Dog,2019-03-07,23348.0,16,23348.0
+197,Rat Terrier Mix,Dog,2019-03-07,23348.0,17,23348.0
+198,Schipperke Mix,Dog,2019-01-13,36641.0,1,36641.0
+199,Shih Tzu Mix,Dog,2019-01-10,25369.0,1,25369.0
+200,Shih Tzu Mix,Dog,2019-02-04,51078.0,2,38224.0
+201,Siamese,Cat,2019-01-01,23348.0,1,23348.0
+202,Siamese,Cat,2019-01-15,23348.0,2,23348.0
+203,Siamese Mix,Cat,2019-01-03,42398.0,1,42398.0
+204,Siamese Mix,Cat,2019-01-19,38256.0,2,40327.0
+205,Siberian Husky Mix,Dog,2019-01-10,38256.0,1,38256.0
+206,Skunk,Other,2019-03-01,68244.0,1,68244.0
+207,Snake,Other,2019-01-06,57710.0,1,57710.0
+208,Soft Coated Wheaten Terrier Mix,Dog,2019-02-04,38256.0,1,38256.0
