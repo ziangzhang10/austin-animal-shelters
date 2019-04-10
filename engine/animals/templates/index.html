@@ -4,6 +4,7 @@
 <head>
     <meta charset='utf-8' />
     <title>FAAC</title>
+	<link rel="icon" href="icons/Logo/LogoFAAC.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
@@ -28,7 +29,7 @@
       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
-  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   
 </head>
 
@@ -64,8 +65,8 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkVisual">
             <a class="dropdown-item" href="{{ url_for('map') }}">Map</a>
-            <a class="dropdown-item" href="{{ url_for('bargraph') }}">Bar Graph</a>
-            <a class="dropdown-item" href="{{ url_for('scatter') }}">Scatter Plot</a>
+            <a class="dropdown-item" href="{{ url_for('bargraph.html') }}">Bar Graph</a>
+            <a class="dropdown-item" href="{{ url_for('scatter.html') }}">Scatter Plot</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -85,23 +86,148 @@
       </ul>
     </div>
   </nav>
+  <br>
 
-  <div class="container" id="map-container">
-    <!-- <div id="map-id"></div> -->
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Austin Animals Rescue Study</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+  <div class="container"><!--Slideshow picture-->
+  <div class = "row">
+  <div class="col-xs-1 hidden-sm" ></div>
+  <div class="col-md-10 col-sm-12 hidden-xs"  >
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active peopleCarouselImg">
+        <img src="\static\png\slideshow\cropped-cat-header-1.jpg" alt="Chania">
+        <div class="carousel-caption">
+          <h3>Cats</h3>
+          <p2>Take a Cat home with you today!</p2>
+        </div>
+      </div>
+  
+      <div class="item peopleCarouselImg">
+        <img src="\static\png\slideshow\Blog_Bird_Header.jpg" alt="Chicago">
+        <div class="carousel-caption">
+          <h3>Birds</h3>
+          <p2>Thank you, Birds!</p2>
+        </div>
+      </div>
+  
+      <div class="item peopleCarouselImg">
+        <img src="\static\png\slideshow\mutDog-Header.jpg" alt="New York">
+        <div class="carousel-caption">
+          <h3>Dogs</h3>
+          <p2>Found Dogs! Adoptable Dogs!</p2>
+        </div>
       </div>
     </div>
-
+  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-
-  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+  
+  
+  </div>
+  </div></div>
+  <br><br>
+  <div class= "container">
+  <div class = "row">
+  <div class="col-xs-1 hidden-sm" ></div>
+  <div class="col-md-10 col-xs-12 "  >
+  <div class = "row">
+  
+  <div class="col-sm-4">
+  <!--Left well-->
+  <div class="well ">
+  <h4>Filters </h4>
+      <p>Select the categorizes you wish to filter by. </p>
+      
+  <!-- Check box -->
+  <h3>Animals</h3>
+  <form id="form" class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-primary btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Bird" checked>Bird<br>
+    </label>
+    <label class="btn btn-primary btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Cat">Cat<br>
+    </label>
+    <label class="btn btn-primary btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Dog">Dog<br>
+    </label>
+    <label class="btn btn-primary btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Other">Other<br>
+    </label>
+  </form>
+  <br><br>
+  <h3>State</h3>
+  <form id="form" class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active">
+      <input type="checkbox" name="myCheckBox" value="Adopted" checked>Adopted<br>
+    </label>
+    <label class="btn btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Foster">foster<br>
+    </label>
+    <label class="btn btn-secondary active">
+      <input type="checkbox" name="myCheckBox" value="Stray">Stray<br>
+    </label>
+    <label class="btn btn-secondary">
+      <input type="checkbox" name="myCheckBox" value="Dead">Dead<br>
+    </label>
+  </form>
+  
+  
+  <br>
+      <p>words</p>
+      
+  
+  </div>
+  </div>
+  <div class="col-sm-8"> <!--right well-->
+    <div class="well  "><h3>Or Graphs can go here</h3>
+               <p>Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.</p>
+            <p>words or graphs</p>
+            <p> words</p>
+            </div>
+  
+  </div>
+  </div>
+  
+  <br>
+  <br>
+  <div class="well"><h3>Graphs would go here</h3><!--footer-->
+               <p>words on Paragraphs</p>
+            <p>The oldest classical Greek and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.[2] The Greek paragraphos evolved into the pilcrow (Â¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences. The hedera leaf (e.g. â) has also been used in the same way.
+  
+  <p>https://www.w3schools.com/howto/howto_js_filter_elements.asp </p>
+  <p>Indented paragraphs demonstrated in the US Constitution</p>
+  <p>In ancient manuscripts, another means to divide sentences into paragraphs was a line break (newline) followed by an initial at the beginning of the next paragraph. An initial is an oversized capital letter, sometimes outdented beyond the margin of the text. This style can be seen, for example, in the original Old English manuscript of Beowulf. Outdenting is still used in English typography, though not commonly.[3] Modern English typography usually indicates a new paragraph by indenting the first line. This style can be seen in the (handwritten) United States Constitution from 1787. For additional ornamentation, a hedera leaf or other symbol can be added to the inter-paragraph whitespace, or put in the indentation space.</p>
+  
+  <p>A second common modern English style is to use no indenting, but add vertical white space to create "block paragraphs." On a typewriter, a double carriage return produces a blank line for this purpose; professional typesetters (or word processing software) may put in an arbitrary vertical space by adjusting leading. This style is very common in electronic formats, such as on the World Wide Web and email.</p>
+  
+  
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div></div></div>
 
   <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
