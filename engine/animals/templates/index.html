@@ -64,9 +64,9 @@
             Visuals
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkVisual">
-            <a class="dropdown-item" href="{{ url_for('map.html') }}">Map</a>
-            <a class="dropdown-item" href="{{ url_for('bargraph.html') }}">Bar Graph</a>
-            <a class="dropdown-item" href="{{ url_for('scatter.html') }}">Scatter Plot</a>
+            <a class="dropdown-item" href="{{ url_for('map') }}">Map</a>
+            <a class="dropdown-item" href="{{ url_for('bargraph') }}">Bar Graph</a>
+            <a class="dropdown-item" href="{{ url_for('scatter') }}">Scatter Plot</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -250,7 +250,7 @@
   <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
 
   <!-- Our JavaScript -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/logic_index.js') }}"></script>
 
 </body>
 
