@@ -10,7 +10,7 @@ body {
   margin:0; 
   padding:0;
   font-family:'Vast Shadow', cursive, 'Maven Pro', sans-serif;
-  background-image: url("\static\png\mixedaniamls4.jpg");
+  background-image: "/static/png/mixedaniamls4.jpg";
   background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
