@@ -90,6 +90,7 @@ def bardata():
    # reset index 
    cases_per_zip = cases_per_zip.reset_index()
    
+
    # using dictionary to convert specific columns 
    convert_dict = {'zipcode': 'str', 
                   'number_cases': int,
@@ -100,6 +101,11 @@ def bardata():
                   } 
    
    cases_per_zip = cases_per_zip.astype(convert_dict)
+
+
+   # Re-order the sample data by descending order of "sample_values"
+   cases_per_zip = cases_per_zip.sort_values(by=['number_cases'], ascending=False)
+
    results = cases_per_zip.to_json(orient='records')
    #"""Return the MetaData for a given sample."""
    # sel = [
