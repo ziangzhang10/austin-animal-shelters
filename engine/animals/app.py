@@ -42,7 +42,7 @@ def index():
 
 @app.route("/map")
 def map():
-   None
+   return render_template("map.html")
  
 #    engine = create_engine("sqlite:///db/austin_animals_db.sqlite")
 #    mappy_str = "select i.*,  \
