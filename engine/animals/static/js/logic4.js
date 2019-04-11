@@ -27,7 +27,7 @@ d3.json(urlzipcodes, function(data){
    }).addTo(Zipcodes);
  });
 
-urlparks ="https://raw.githubusercontent.com/veyEskelson/maptest/master/data/City%20of%20Austin%20Parks.geojson";
+urlparks ="https://raw.githubusercontent.com/ziangzhang10/data_bootcamp_project2/master/Data/City%20of%20Austin%20Parks.geojson";
 
  d3.json(urlparks, function(data){
     console.log(typeof(data));
@@ -44,7 +44,7 @@ urlparks ="https://raw.githubusercontent.com/veyEskelson/maptest/master/data/Cit
     }).addTo(AustinParks);
   });
 
-urloffleash ="https://raw.githubusercontent.com/veyEskelson/maptest/master/data/Off-%20Leash%20Areas.geojson";
+urloffleash ="https://raw.githubusercontent.com/ziangzhang10/data_bootcamp_project2/master/Data/Off-%20Leash%20Areas.geojson";
 
 d3.json(urloffleash, function(data){
     console.log(typeof(data));

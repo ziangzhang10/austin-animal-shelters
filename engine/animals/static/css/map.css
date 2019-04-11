@@ -5,6 +5,11 @@ body,
   padding: 0;
   margin: 0;
 }
+#map {
+  height: 75%;
+  padding: 0;
+  margin: 0;
+}
 .marker {
   background-image: url('\static\png\Markers\Cat.png');
   background-size: cover;

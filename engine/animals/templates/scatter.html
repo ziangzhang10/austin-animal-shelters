@@ -4,8 +4,9 @@
 <head>
 	<meta charset='utf-8' />
 	<title>FAAC</title>
+	<link rel="icon" href="/static/png/LogoFAAC.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -34,8 +35,7 @@
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<!-- <a class="navbar-brand" href="/static/png/Logo2-FAAC.png">Logo</a> -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">									<!--Navbar-->
 		<a class="navbar-brand" href="{{ url_for('index') }}">
 			<img src="/static/png/Logo3-FAAC.png" , width="120" , height="57" , alt="Logo">
 		</a>
@@ -46,18 +46,10 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item active">
-					<a class="nav-link" href="{{ url_for('index') }}">FAAC <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{{ url_for('index') }}">FAKE Austin Animal Center <span class="sr-only">(current)</span></a>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="#">Cat</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Dog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Other</a>
-				</li> -->
-				<li class="nav-item dropdown">
+
+				<li class="nav-item dropdown">													<!--Navbar Our website pages links-->
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkVisual" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">
 						Visuals
@@ -69,7 +61,7 @@
 							href="{{ url_for('scatter') }}">Scatter Plot</a>
 					</div>
 				</li>
-				<li class="nav-item dropdown">
+				<li class="nav-item dropdown">													<!--Navbar Links to our Sources used for the website-->
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">
 						Sources

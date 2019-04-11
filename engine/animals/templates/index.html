@@ -4,25 +4,30 @@
 <head>
     <meta charset='utf-8' />
     <title>FAAC</title>
-	<link rel="icon" href="icons/Logo/LogoFAAC.png">
+  	<link rel="icon" href="icons/Logo/LogoFAAC.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
+      
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"></script>
+     
+   
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Acme|Asap|Asap+Condensed|Baloo|Baloo+Chettan|Indie+Flower|Jacques+Francois+Shadow|Londrina+Shadow|Maven+Pro|Shadows+Into+Light|Signika|Varela+Round|Vast+Shadow"
-      rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Vast+Shadow" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
@@ -30,62 +35,52 @@
   
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-  
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- <a class="navbar-brand" href="/static/png/Logo2-FAAC.png">Logo</a> -->
-    <a class="navbar-brand" href="{{ url_for('index') }}">
-      <img src="/static/png/Logo3-FAAC.png" , width="120" , height="57" , alt="Logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ url_for('index') }}">FAAC <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
-					<a class="nav-link" href="#">Cat</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Dog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Other</a>
-				</li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkVisual" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Visuals
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkVisual">
-            <a class="dropdown-item" href="{{ url_for('map') }}">Map</a>
-            <a class="dropdown-item" href="{{ url_for('bargraph') }}">Bar Graph</a>
-            <a class="dropdown-item" href="{{ url_for('scatter') }}">Scatter Plot</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Sources
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="http://geopandas.org/">Geocode</a>
-            <a class="dropdown-item" href="https://www.mapbox.com/">Mapbox</a>
-            <a class="dropdown-item"
-              href="https://data.austintexas.gov/Locations-and-Maps/Zipcodes/ghsj-v65t">Shapefile</a>
-            <a class="dropdown-item"
-              href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Found-Pets-Map/hye6-gvq2">AAC</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">										<!--Navbar-->
+      <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="/static/png/Logo3-FAAC.png" , width="120" , height="57" , alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('index') }}">FAKE Austin Animal Center <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">															<!--Navbar Our website pages links-->
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkVisual" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Visuals
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkVisual">
+              <a class="dropdown-item" href="{{ url_for('map') }}">Map</a>
+              <a class="dropdown-item" href="{{ url_for('bargraph') }}">Bar Graph</a>
+              <a class="dropdown-item"
+                href="{{ url_for('scatter') }}">Scatter Plot</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">															<!--Navbar Links to our Sources used for the website-->
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Sources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="http://geopandas.org/">Geocode</a>
+              <a class="dropdown-item" href="https://www.mapbox.com/">Mapbox</a>
+              <a class="dropdown-item"
+                href="https://data.austintexas.gov/Locations-and-Maps/Zipcodes/ghsj-v65t">Shapefile</a>
+              <a class="dropdown-item"
+                href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Found-Pets-Map/hye6-gvq2">AAC</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
   <br>
 
   <div class="container"><!--Slideshow picture-->
@@ -144,90 +139,36 @@
   </div></div>
   <br><br>
   <div class= "container">
-  <div class = "row">
-  <div class="col-xs-1 hidden-sm" ></div>
-  <div class="col-md-10 col-xs-12 "  >
-  <div class = "row">
-  
-  <div class="col-sm-4">
-  <!--Left well-->
-  <div class="well ">
-  <h4>Filters </h4>
-      <p>Select the categorizes you wish to filter by. </p>
-      
-  <!-- Check box -->
-  <h3>Animals</h3>
-  <form id="form" class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-primary btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Bird" checked>Bird<br>
-    </label>
-    <label class="btn btn-primary btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Cat">Cat<br>
-    </label>
-    <label class="btn btn-primary btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Dog">Dog<br>
-    </label>
-    <label class="btn btn-primary btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Other">Other<br>
-    </label>
-  </form>
-  <br><br>
-  <h3>State</h3>
-  <form id="form" class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary active">
-      <input type="checkbox" name="myCheckBox" value="Adopted" checked>Adopted<br>
-    </label>
-    <label class="btn btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Foster">foster<br>
-    </label>
-    <label class="btn btn-secondary active">
-      <input type="checkbox" name="myCheckBox" value="Stray">Stray<br>
-    </label>
-    <label class="btn btn-secondary">
-      <input type="checkbox" name="myCheckBox" value="Dead">Dead<br>
-    </label>
-  </form>
-  
-  
-  <br>
-      <p>words</p>
-      
-  
+     <div class = "row">
+      <div class="col-xs-1 hidden-sm" ></div>
+      <div class="col-md-10 col-xs-12 "  >
+        <div class = "row">
+          <br>
+          <br>
+          <div class="well"><h3>Welcome to FAAC!</h3>
+            <p>Which stands for FAKE Austin Animal Center. To visit the real Austin Animal Center click <a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data"></a>here.</a></p>
+            <br>
+            <p>This FAAC website was created for Group Project #2 for DataAnalytics Bootcamp at Rice University.</p>
+            <br>
+            <p>Austin, Texas is the largest No Kill community in the nation Providing shelter to more than 16,000 animals each year</p>
+            <br>
+            <p>The Austin Animal Center is an open-intake facility where lost and surrendered animals from all of Travis County in need of 
+              shelter are accepted regardless of age, health, species or breed. The goal of the Austin Animal Center is to place all adoptable animals in forever homes. </p>
+            <p>Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center.
+                All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.</p>
+            </div>  
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
-  </div>
-  <div class="col-sm-8"> <!--right well-->
-    <div class="well  "><h3>Or Graphs can go here</h3>
-               <p>Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.</p>
-            <p>words or graphs</p>
-            <p> words</p>
-            </div>
-  
-  </div>
-  </div>
-  
-  <br>
-  <br>
-  <div class="well"><h3>Graphs would go here</h3><!--footer-->
-               <p>words on Paragraphs</p>
-            <p>The oldest classical Greek and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became common. The first way to divide sentences into groups was the original paragraphos, similar to an underscore at the beginning of the new group.[2] The Greek paragraphos evolved into the pilcrow (Â¶), which in English manuscripts in the Middle Ages can be seen inserted inline between sentences. The hedera leaf (e.g. â) has also been used in the same way.
-  
-  <p>https://www.w3schools.com/howto/howto_js_filter_elements.asp </p>
-  <p>Indented paragraphs demonstrated in the US Constitution</p>
-  <p>In ancient manuscripts, another means to divide sentences into paragraphs was a line break (newline) followed by an initial at the beginning of the next paragraph. An initial is an oversized capital letter, sometimes outdented beyond the margin of the text. This style can be seen, for example, in the original Old English manuscript of Beowulf. Outdenting is still used in English typography, though not commonly.[3] Modern English typography usually indicates a new paragraph by indenting the first line. This style can be seen in the (handwritten) United States Constitution from 1787. For additional ornamentation, a hedera leaf or other symbol can be added to the inter-paragraph whitespace, or put in the indentation space.</p>
-  
-  <p>A second common modern English style is to use no indenting, but add vertical white space to create "block paragraphs." On a typewriter, a double carriage return produces a blank line for this purpose; professional typesetters (or word processing software) may put in an arbitrary vertical space by adjusting leading. This style is very common in electronic formats, such as on the World Wide Web and email.</p>
-  
-  
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  </div></div></div>
 
   <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
@@ -250,7 +191,8 @@
   <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
 
   <!-- Our JavaScript -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/logic_index.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/logic4.js') }}"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/logic4.js') }}"> -->
 
 </body>
 

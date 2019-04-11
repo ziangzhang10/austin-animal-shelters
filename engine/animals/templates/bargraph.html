@@ -31,12 +31,14 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/map.css') }}">
 
 
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bargraph.js') }}"></script>
+
 </head> 
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<!-- <a class="navbar-brand" href="/static/png/Logo2-FAAC.png">Logo</a> -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">										<!--Navbar-->
 		<a class="navbar-brand" href="{{ url_for('index') }}">
 			<img src="/static/png/Logo3-FAAC.png" , width="120" , height="57" , alt="Logo">
 		</a>
@@ -47,18 +49,9 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item active">
-					<a class="nav-link" href="{{ url_for('index') }}">FAAC <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{{ url_for('index') }}">FAKE Austin Animal Center <span class="sr-only">(current)</span></a>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="#">Cat</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Dog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Other</a>
-				</li> -->
-				<li class="nav-item dropdown">
+				<li class="nav-item dropdown">															<!--Navbar Our website pages links-->
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkVisual" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">
 						Visuals
@@ -70,7 +63,7 @@
 							href="{{ url_for('scatter') }}">Scatter Plot</a>
 					</div>
 				</li>
-				<li class="nav-item dropdown">
+				<li class="nav-item dropdown">															<!--Navbar Links to our Sources used for the website-->
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">
 						Sources
@@ -87,20 +80,97 @@
 			</ul>
 		</div>
 	</nav>
-
-<!-- 
+<br>
+<br>
+<br>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="chart" id="plot">
-				</div>
-			</div>
+					<div id="chartContainer" style="height: 800px; width: 100%;"></div> 							<!-- Bar Graph-->
 		</div>
-	</div> -->
+		<div class="col-xs-1 hidden-sm" ></div>
+		<div class="col-md-10">
+				<br>
+				<br>
+				<br>
+				<br>
+			<div id="accordion"> 																					<!--Text content-->
+					<div class="card">
+					  <div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+						  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Graph Shows Us:
+						  </button>
+						</h5>
+					  </div>
+				  
+					  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+						  <p>Note some key points that the graph tells us.</p>
+						</div>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="card-header" id="headingTwo">
+						<h5 class="mb-0">
+						  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Data Used:
+						  </button>
+						</h5>
+					  </div>
+					  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+								<p>Postal Zipcodes for Travis County as created by city staff to assist in assigning zipcodes to address information. </p>
+								<br>
+								<p>Animal Adoptions information comes from <a href="https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data"></a>ACC open data portal</a></p>
+								<p></p>
+								<p>The Austin Animal Center is an open-intake facility where lost and surrendered animals from all of Travis County in need of 
+										shelter are accepted regardless of age, health, species or breed. The goal of the Austin Animal Center is to place all adoptable animals in forever homes. </p>
+									 <br>
+										<p>Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center.
+										  All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.</p>
+						</div>
+					  </div>
+					</div>
+					<div class="card">
+					  <div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+						  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Methodology
+						  </button>
+						</h5>
+					  </div>
+					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+						  Explain how graph was made. plotly etc.
+						</div>
+					  </div>
+					</div>
+					<div class="card">
+							<div class="card-header" id="headingFour">
+							  <h5 class="mb-0">
+								<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								  Video
+								</button>
+							  </h5>
+							</div>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+							  <div class="card-body">
+									<div class="col-md-10"><!-- Music --> 
+										<iframe width="200" height="200" src="https://www.youtube.com/embed/7HIxIR9KPmY?start=64" autoplay;frameborder="0" allowfullscreen></iframe>
+									</div>
+							  </div>
+							</div>
+						  </div>
+			</div>
+			<br>
+			<br>
+		</div>
+	</div>
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-	<script type="text/javascript" src="{{ url_for('static', filename='js/bargraph.js') }}"></script>
-	<div id="chartContainer" style="height: 800px; width: 100%;"></div>
+
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bargraph.js') }}"></script> -->
+	<!-- <div id="chartContainer" style="height: 800px; width: 100%;"></div> -->
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
