@@ -1,0 +1,202 @@
+,breed,animal_type,date,ave_hsIncome,breed_cumsum,cum_mean
+0,American Pit Bull Terrier Mix,Dog,01,75204.0,1,75204.0
+1,American Pit Bull Terrier Mix,Dog,02,36480.0,2,55842.0
+2,American Pit Bull Terrier Mix,Dog,03,0.0,0,0.0
+1,Australian Cattle Dog/Labrador Retriever,Dog,01,0.0,0,0.0
+0,Australian Cattle Dog/Labrador Retriever,Dog,02,42398.0,1,42398.0
+2,Australian Cattle Dog/Labrador Retriever,Dog,03,0.0,0,0.0
+1,Australian Kelpie Mix,Dog,01,0.0,0,0.0
+0,Australian Kelpie Mix,Dog,02,42398.0,1,42398.0
+2,Australian Kelpie Mix,Dog,03,0.0,0,0.0
+0,Basenji Mix,Dog,01,47076.0,1,47076.0
+1,Basenji Mix,Dog,02,0.0,0,0.0
+2,Basenji Mix,Dog,03,0.0,0,0.0
+1,Basset Hound/German Shepherd,Dog,01,0.0,0,0.0
+0,Basset Hound/German Shepherd,Dog,02,57710.0,1,57710.0
+2,Basset Hound/German Shepherd,Dog,03,0.0,0,0.0
+0,Bat Mix,Other,01,25369.0,1,25369.0
+1,Bat Mix,Other,02,23348.0,3,28453.0
+2,Bat Mix,Other,03,0.0,0,0.0
+0,Beagle,Dog,01,57710.0,1,57710.0
+1,Beagle,Dog,02,0.0,0,0.0
+2,Beagle,Dog,03,0.0,0,0.0
+0,Beagle Mix,Dog,01,87290.0,3,44662.0
+1,Beagle Mix,Dog,02,57710.0,4,47924.0
+2,Beagle Mix,Dog,03,23348.0,6,39732.0
+0,Beagle/German Shepherd,Dog,01,43458.0,1,43458.0
+1,Beagle/German Shepherd,Dog,02,0.0,0,0.0
+2,Beagle/German Shepherd,Dog,03,0.0,0,0.0
+0,Beagle/Pug,Dog,01,38206.0,1,38206.0
+1,Beagle/Pug,Dog,02,0.0,0,0.0
+2,Beagle/Pug,Dog,03,0.0,0,0.0
+0,Black Mouth Cur Mix,Dog,01,45090.0,1,45090.0
+1,Black Mouth Cur Mix,Dog,02,0.0,0,0.0
+2,Black Mouth Cur Mix,Dog,03,0.0,0,0.0
+1,Border Terrier Mix,Dog,01,0.0,0,0.0
+0,Border Terrier Mix,Dog,02,23348.0,1,23348.0
+2,Border Terrier Mix,Dog,03,0.0,0,0.0
+0,Boxer Mix,Dog,01,62294.0,1,62294.0
+1,Boxer Mix,Dog,02,0.0,0,0.0
+2,Boxer Mix,Dog,03,0.0,0,0.0
+0,Boxer/Labrador Retriever,Dog,01,38206.0,2,31788.0
+1,Boxer/Labrador Retriever,Dog,02,0.0,0,0.0
+2,Boxer/Labrador Retriever,Dog,03,0.0,0,0.0
+1,Bullmastiff,Dog,01,0.0,0,0.0
+2,Bullmastiff,Dog,02,0.0,0,0.0
+0,Bullmastiff,Dog,03,75204.0,1,75204.0
+0,Bullmastiff Mix,Dog,01,38206.0,1,38206.0
+1,Bullmastiff Mix,Dog,02,0.0,0,0.0
+2,Bullmastiff Mix,Dog,03,0.0,0,0.0
+1,Cairn Terrier Mix,Dog,01,0.0,0,0.0
+0,Cairn Terrier Mix,Dog,02,38206.0,1,38206.0
+2,Cairn Terrier Mix,Dog,03,0.0,0,0.0
+1,Cairn Terrier/Dachshund Wirehair,Dog,01,0.0,0,0.0
+0,Cairn Terrier/Dachshund Wirehair,Dog,02,38256.0,1,38256.0
+2,Cairn Terrier/Dachshund Wirehair,Dog,03,0.0,0,0.0
+0,Catahoula Mix,Dog,01,38256.0,1,38256.0
+1,Catahoula Mix,Dog,02,0.0,0,0.0
+2,Catahoula Mix,Dog,03,0.0,0,0.0
+0,Cavalier Span,Dog,01,23348.0,1,23348.0
+1,Cavalier Span,Dog,02,0.0,0,0.0
+2,Cavalier Span,Dog,03,0.0,0,0.0
+1,Chesa Bay Retr/Pit Bull,Dog,01,0.0,0,0.0
+0,Chesa Bay Retr/Pit Bull,Dog,02,23348.0,1,23348.0
+2,Chesa Bay Retr/Pit Bull,Dog,03,0.0,0,0.0
+0,Chihuahua Longhair Mix,Dog,01,23348.0,1,23348.0
+1,Chihuahua Longhair Mix,Dog,02,23348.0,2,23348.0
+2,Chihuahua Longhair Mix,Dog,03,0.0,0,0.0
+0,Chihuahua Shorthair,Dog,01,30207.0,1,30207.0
+1,Chihuahua Shorthair,Dog,02,0.0,0,0.0
+2,Chihuahua Shorthair,Dog,03,0.0,0,0.0
+0,Chihuahua Shorthair Mix,Dog,01,36641.0,10,40294.0
+1,Chihuahua Shorthair Mix,Dog,02,36978.0,14,36661.0
+2,Chihuahua Shorthair Mix,Dog,03,60861.0,16,37342.0
+1,Chihuahua Shorthair/Dachshund,Dog,01,0.0,0,0.0
+0,Chihuahua Shorthair/Dachshund,Dog,02,36480.0,2,30924.0
+2,Chihuahua Shorthair/Dachshund,Dog,03,0.0,0,0.0
+0,Chinese Sharpei Mix,Dog,01,23348.0,1,23348.0
+1,Chinese Sharpei Mix,Dog,02,0.0,0,0.0
+2,Chinese Sharpei Mix,Dog,03,0.0,0,0.0
+0,Cocker Spaniel,Dog,01,38206.0,1,38206.0
+1,Cocker Spaniel,Dog,02,0.0,0,0.0
+2,Cocker Spaniel,Dog,03,0.0,0,0.0
+0,Coyote,Other,01,38256.0,1,38256.0
+1,Coyote,Other,02,0.0,0,0.0
+2,Coyote,Other,03,0.0,0,0.0
+0,Dachshund Mix,Dog,01,38256.0,6,39387.0
+1,Dachshund Mix,Dog,02,36480.0,10,38224.0
+2,Dachshund Mix,Dog,03,0.0,0,0.0
+1,Dachshund Wirehair Mix,Dog,01,0.0,0,0.0
+0,Dachshund Wirehair Mix,Dog,02,36978.0,1,36978.0
+2,Dachshund Wirehair Mix,Dog,03,0.0,0,0.0
+1,Domestic Longhair Mix,Cat,01,0.0,0,0.0
+0,Domestic Longhair Mix,Cat,02,23348.0,2,33403.0
+2,Domestic Longhair Mix,Cat,03,0.0,0,0.0
+0,Domestic Medium Hair Mix,Cat,01,43458.0,1,43458.0
+1,Domestic Medium Hair Mix,Cat,02,0.0,0,0.0
+2,Domestic Medium Hair Mix,Cat,03,0.0,0,0.0
+0,Domestic Shorthair,Cat,01,61284.0,1,61284.0
+1,Domestic Shorthair,Cat,02,0.0,0,0.0
+2,Domestic Shorthair,Cat,03,0.0,0,0.0
+0,Domestic Shorthair Mix,Cat,01,38256.0,20,39228.0
+1,Domestic Shorthair Mix,Cat,02,38206.0,41,39597.0
+2,Domestic Shorthair Mix,Cat,03,0.0,0,0.0
+1,Domestic Shorthair/Bengal,Cat,01,0.0,0,0.0
+0,Domestic Shorthair/Bengal,Cat,02,23348.0,1,23348.0
+2,Domestic Shorthair/Bengal,Cat,03,0.0,0,0.0
+0,Duck Mix,Bird,01,59497.0,1,59497.0
+1,Duck Mix,Bird,02,0.0,0,0.0
+2,Duck Mix,Bird,03,0.0,0,0.0
+1,Fox,Other,01,0.0,0,0.0
+2,Fox,Other,02,0.0,0,0.0
+0,Fox,Other,03,128524.0,1,128524.0
+0,German Shepherd,Dog,01,23348.0,2,23348.0
+1,German Shepherd,Dog,02,23348.0,4,23348.0
+2,German Shepherd,Dog,03,0.0,0,0.0
+0,German Shepherd Mix,Dog,01,36480.0,2,36480.0
+1,German Shepherd Mix,Dog,02,34242.0,5,36410.0
+2,German Shepherd Mix,Dog,03,34242.0,6,36048.0
+0,German Shepherd/Great Pyrenees,Dog,01,26646.0,1,26646.0
+1,German Shepherd/Great Pyrenees,Dog,02,0.0,0,0.0
+2,German Shepherd/Great Pyrenees,Dog,03,0.0,0,0.0
+0,Golden Retriever Mix,Dog,01,57710.0,2,72370.0
+1,Golden Retriever Mix,Dog,02,62648.0,3,69129.0
+2,Golden Retriever Mix,Dog,03,0.0,0,0.0
+1,Golden Retriever/Irish Setter,Dog,01,0.0,0,0.0
+0,Golden Retriever/Irish Setter,Dog,02,29779.0,1,29779.0
+2,Golden Retriever/Irish Setter,Dog,03,0.0,0,0.0
+1,Great Pyrenees/Chow Chow,Dog,01,0.0,0,0.0
+0,Great Pyrenees/Chow Chow,Dog,02,23348.0,1,23348.0
+2,Great Pyrenees/Chow Chow,Dog,03,0.0,0,0.0
+0,Hamster,Other,01,38256.0,1,38256.0
+1,Hamster,Other,02,0.0,0,0.0
+2,Hamster,Other,03,0.0,0,0.0
+1,Irish Wolfhound Mix,Dog,01,0.0,0,0.0
+0,Irish Wolfhound Mix,Dog,02,38256.0,1,38256.0
+2,Irish Wolfhound Mix,Dog,03,0.0,0,0.0
+1,Jack Russell Terrier Mix,Dog,01,0.0,0,0.0
+0,Jack Russell Terrier Mix,Dog,02,23348.0,1,23348.0
+2,Jack Russell Terrier Mix,Dog,03,0.0,0,0.0
+0,Labrador Retriever Mix,Dog,01,36480.0,19,39560.0
+1,Labrador Retriever Mix,Dog,02,23348.0,21,38974.0
+2,Labrador Retriever Mix,Dog,03,0.0,0,0.0
+1,Labrador Retriever/Beagle,Dog,01,0.0,0,0.0
+0,Labrador Retriever/Beagle,Dog,02,23348.0,1,23348.0
+2,Labrador Retriever/Beagle,Dog,03,0.0,0,0.0
+1,Labrador Retriever/Great Pyrenees,Dog,01,0.0,0,0.0
+0,Labrador Retriever/Great Pyrenees,Dog,02,30207.0,1,30207.0
+2,Labrador Retriever/Great Pyrenees,Dog,03,0.0,0,0.0
+1,Lhasa Apso Mix,Dog,01,0.0,0,0.0
+0,Lhasa Apso Mix,Dog,02,35794.0,1,35794.0
+2,Lhasa Apso Mix,Dog,03,0.0,0,0.0
+1,Maine Coon Mix,Cat,01,0.0,0,0.0
+0,Maine Coon Mix,Cat,02,23348.0,1,23348.0
+2,Maine Coon Mix,Cat,03,0.0,0,0.0
+0,Miniature Schnauzer Mix,Dog,01,23348.0,2,33403.0
+1,Miniature Schnauzer Mix,Dog,02,0.0,0,0.0
+2,Miniature Schnauzer Mix,Dog,03,0.0,0,0.0
+0,Parakeet Mix,Bird,01,23348.0,1,23348.0
+1,Parakeet Mix,Bird,02,0.0,0,0.0
+2,Parakeet Mix,Bird,03,0.0,0,0.0
+0,Pit Bull Mix,Dog,01,36641.0,10,44062.0
+1,Pit Bull Mix,Dog,02,61284.0,16,41747.0
+2,Pit Bull Mix,Dog,03,0.0,0,0.0
+0,Pointer Mix,Dog,01,45090.0,1,45090.0
+1,Pointer Mix,Dog,02,36641.0,2,40866.0
+2,Pointer Mix,Dog,03,0.0,0,0.0
+0,Pointer/Chinese Sharpei,Dog,01,25369.0,1,25369.0
+1,Pointer/Chinese Sharpei,Dog,02,0.0,0,0.0
+2,Pointer/Chinese Sharpei,Dog,03,0.0,0,0.0
+1,Pomeranian,Dog,01,0.0,0,0.0
+0,Pomeranian,Dog,02,23348.0,1,23348.0
+2,Pomeranian,Dog,03,0.0,0,0.0
+0,Raccoon Mix,Other,01,51078.0,1,51078.0
+1,Raccoon Mix,Other,02,0.0,0,0.0
+2,Raccoon Mix,Other,03,0.0,0,0.0
+0,Rat Terrier Mix,Dog,01,23348.0,1,23348.0
+1,Rat Terrier Mix,Dog,02,23348.0,13,23348.0
+2,Rat Terrier Mix,Dog,03,23348.0,17,23348.0
+0,Schipperke Mix,Dog,01,36641.0,1,36641.0
+1,Schipperke Mix,Dog,02,0.0,0,0.0
+2,Schipperke Mix,Dog,03,0.0,0,0.0
+0,Shih Tzu Mix,Dog,01,25369.0,1,25369.0
+1,Shih Tzu Mix,Dog,02,51078.0,2,38224.0
+2,Shih Tzu Mix,Dog,03,0.0,0,0.0
+0,Siamese,Cat,01,23348.0,2,23348.0
+1,Siamese,Cat,02,0.0,0,0.0
+2,Siamese,Cat,03,0.0,0,0.0
+0,Siamese Mix,Cat,01,38256.0,2,40327.0
+1,Siamese Mix,Cat,02,0.0,0,0.0
+2,Siamese Mix,Cat,03,0.0,0,0.0
+0,Siberian Husky Mix,Dog,01,38256.0,1,38256.0
+1,Siberian Husky Mix,Dog,02,0.0,0,0.0
+2,Siberian Husky Mix,Dog,03,0.0,0,0.0
+1,Skunk,Other,01,0.0,0,0.0
+2,Skunk,Other,02,0.0,0,0.0
+0,Skunk,Other,03,68244.0,1,68244.0
+0,Snake,Other,01,57710.0,1,57710.0
+1,Snake,Other,02,0.0,0,0.0
+2,Snake,Other,03,0.0,0,0.0
+1,Soft Coated Wheaten Terrier Mix,Dog,01,0.0,0,0.0
+0,Soft Coated Wheaten Terrier Mix,Dog,02,38256.0,1,38256.0
+2,Soft Coated Wheaten Terrier Mix,Dog,03,0.0,0,0.0
