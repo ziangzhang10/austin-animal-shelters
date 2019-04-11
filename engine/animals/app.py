@@ -10,10 +10,12 @@ from sqlalchemy import create_engine
 
 from flask import Flask, jsonify, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
 
 import sqlite3
 
 app = Flask(__name__)
+Bootstrap(app) 
 
 
 #################################################
@@ -42,7 +44,7 @@ def index():
 
 @app.route("/map")
 def map():
-   None
+   return render_template("map.html")
  
 #    engine = create_engine("sqlite:///db/austin_animals_db.sqlite")
 #    mappy_str = "select i.*,  \
